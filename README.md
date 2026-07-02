@@ -117,11 +117,3 @@ This single-server setup is deployable to any free-tier Node host (e.g. Render):
 - **Realtime**: On login, the client opens a Socket.io connection passing `userId` in the handshake query. The server keeps an in-memory `userId -> socketId` map, broadcasts `getOnlineUsers` on connect/disconnect, and emits `newMessage` to the specific receiver's socket when a message is sent.
 - **Images**: Both profile pictures and message images are base64-encoded client-side, uploaded to Cloudinary by the backend, and only the resulting URL is stored in MongoDB.
 
-## Stretch goals (not implemented — nice to have)
-
-- Typing indicators
-- Message read receipts
-- Unread message counts per conversation
-- Message deletion/editing
-- Group chats
-- Push notifications
